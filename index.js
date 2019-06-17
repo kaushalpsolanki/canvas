@@ -95,10 +95,11 @@ function draw(e){
 //   color = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
 // })
 
-window.addEventListener("orientationchange",func)
-var func = function(e){
-  window.location.reload();
-}
+window.addEventListener("orientationchange",function(){
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  
+})
+
 
 //
 // document.querySelector(".color-picker").addEventListener("change", kaushal)
