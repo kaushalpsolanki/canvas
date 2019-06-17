@@ -60,6 +60,17 @@ window.addEventListener("mousemove",function(e){
   draw()
 })
 
+
+window.addEventListener("touchstart", function(e){
+  // console.log("a")
+  dragging = true;
+})
+
+window.addEventListener("touchend", function(e){
+  // console.log("a")
+  dragging = false;
+})
+
 window.addEventListener("touchmove",function(e){
   x = e.touches[0].pageX;
   y = e.touches[0].pageY;
@@ -86,7 +97,7 @@ function draw(e){
 
 window.addEventListener("orientationchange",func)
 var func = function(e){
-  context.clearRect(0, 0, canvas.width, canvas.height);
+  window.location.reload();
 }
 
 //
